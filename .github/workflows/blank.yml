@@ -2,6 +2,9 @@
 
 name: CI
 
+permissions:
+  pull-requests: write
+
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -34,3 +37,10 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: Comment Pull Request
+        uses: thollander/actions-comment-pull-request@v3.0.1
+        with:
+          message: Bonjour ${{ vars.PRENOM }} ${{ secrets.NOM }}
+          github-token: ${{ github.token }}
+          
