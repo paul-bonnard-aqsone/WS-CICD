@@ -41,6 +41,6 @@ jobs:
       - name: Comment Pull Request
         uses: thollander/actions-comment-pull-request@v3.0.1
         with:
-          message: Bonjour ${{ vars.PRENOM }} ${{ secret.NOM }}
+          message: Bonjour ${{ vars.PRENOM }} ${{ secrets.NOM }}
           github-token: ${{ github.token }}
           
