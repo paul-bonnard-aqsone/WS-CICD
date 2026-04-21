@@ -38,12 +38,6 @@ jobs:
       - name: Comment Pull Request
         uses: thollander/actions-comment-pull-request@v3.0.1
         with:
-          message: # optional
-          file-path: # optional
-          github-token: # optional, default is ${{ github.token }}
-          reactions: # optional
-          pr-number: # optional
-          comment-tag: # optional
-          mode: # optional, default is upsert
-          create-if-not-exists: # optional, default is true
+          message: PR incoming
+          github-token: ${{ github.token }}
           
